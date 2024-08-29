@@ -1,0 +1,151 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "PERN E-Commerce",
+    "collectionId": "955dffa3-53dd-4910-8228-df4f771d1e26",
+    "dateExported": "2024-08-29T13:43:44.615Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "e478060a-a5e8-4579-84cd-1261525d82ab",
+            "colId": "955dffa3-53dd-4910-8228-df4f771d1e26",
+            "containerId": "",
+            "name": "Register User",
+            "url": "http://localhost:3500/users/register",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-08-29T10:45:21.752Z",
+            "modified": "2024-08-29T10:46:12.886Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"turkoaygun@gmail.com\",\n  \"password\": \"aygun12345\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "36eb7065-4ae3-4b41-a735-9982fc5fc5bb",
+            "colId": "955dffa3-53dd-4910-8228-df4f771d1e26",
+            "containerId": "",
+            "name": "Get User",
+            "url": "http://localhost:3500/users/1",
+            "method": "GET",
+            "sortNum": 15000,
+            "created": "2024-08-29T11:14:36.287Z",
+            "modified": "2024-08-29T11:31:07.571Z",
+            "headers": []
+        },
+        {
+            "_id": "a228639a-5deb-47e2-94b3-768ea100a51e",
+            "colId": "955dffa3-53dd-4910-8228-df4f771d1e26",
+            "containerId": "",
+            "name": "Get All Users",
+            "url": "http://localhost:3500/users",
+            "method": "GET",
+            "sortNum": 17500,
+            "created": "2024-08-29T11:28:17.428Z",
+            "modified": "2024-08-29T11:28:32.830Z",
+            "headers": []
+        },
+        {
+            "_id": "2dcd4006-6370-491b-9b76-d4baa0b6a8a0",
+            "colId": "955dffa3-53dd-4910-8228-df4f771d1e26",
+            "containerId": "",
+            "name": "Update User",
+            "url": "http://localhost:3500/users/1",
+            "method": "PATCH",
+            "sortNum": 20000,
+            "created": "2024-08-29T10:56:59.391Z",
+            "modified": "2024-08-29T11:09:38.855Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"fullName\": \"Aygün Bayır\",\n  \"address\": \"Gebze/Kocaeli\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "e5fc54cf-db2e-4501-a949-995099df12c7",
+            "colId": "955dffa3-53dd-4910-8228-df4f771d1e26",
+            "containerId": "",
+            "name": "Delete User",
+            "url": "http://localhost:3500/users/1",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-08-29T11:36:33.821Z",
+            "modified": "2024-08-29T11:36:41.339Z",
+            "headers": []
+        },
+        {
+            "_id": "f4716f24-c7a1-45cd-bb45-6dca54512452",
+            "colId": "955dffa3-53dd-4910-8228-df4f771d1e26",
+            "containerId": "",
+            "name": "Create Product",
+            "url": "http://localhost:3500/products",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-08-29T13:29:24.436Z",
+            "modified": "2024-08-29T13:36:33.182Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Adidas Spor Ayakkabı\",\n  \"price\": 149.90,\n  \"description\": \"Adidas Spor Ayakkabı\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "7f40955a-f6cb-4d4a-9984-43816700eff2",
+            "colId": "955dffa3-53dd-4910-8228-df4f771d1e26",
+            "containerId": "",
+            "name": "Update Product",
+            "url": "http://localhost:3500/products/5",
+            "method": "PATCH",
+            "sortNum": 60000,
+            "created": "2024-08-29T13:36:57.202Z",
+            "modified": "2024-08-29T13:39:17.542Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Siyah Gömlek\",\n  \"description\": \"Siyah Gömlek\",\n  \"imageUrl\": \"https://productimages.hepsiburada.net/s/777/424-600/110000731872745.jpg/format:webp\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "8ee86b25-2193-498e-befc-dd8c600e7c97",
+            "colId": "955dffa3-53dd-4910-8228-df4f771d1e26",
+            "containerId": "",
+            "name": "Get All Products",
+            "url": "http://localhost:3500/products",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-08-29T13:39:53.234Z",
+            "modified": "2024-08-29T13:40:02.960Z",
+            "headers": []
+        },
+        {
+            "_id": "67348203-6393-4c95-bbf7-16eefa922641",
+            "colId": "955dffa3-53dd-4910-8228-df4f771d1e26",
+            "containerId": "",
+            "name": "Get Product",
+            "url": "http://localhost:3500/products/3",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2024-08-29T13:42:57.050Z",
+            "modified": "2024-08-29T13:43:03.193Z",
+            "headers": []
+        },
+        {
+            "_id": "b603ecbe-5c46-47cc-bac5-f627594d1858",
+            "colId": "955dffa3-53dd-4910-8228-df4f771d1e26",
+            "containerId": "",
+            "name": "Delete Product",
+            "url": "http://localhost:3500/products/3",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2024-08-29T13:43:16.834Z",
+            "modified": "2024-08-29T13:43:24.214Z",
+            "headers": []
+        }
+    ],
+    "ref": "yB6HmZsPXG_gFj673Z2I_PYWtEdyrUQUrrwt3-DoPto-uCeJsGDl4H43qkhS7DZCeG7zm2mUpzLlQ85LgIDVHQ"
+}

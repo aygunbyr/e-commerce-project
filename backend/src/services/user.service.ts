@@ -1,29 +1,33 @@
 import { User, Prisma } from "@prisma/client";
 import UserRepository from "../repositories/user.repository";
+import { ResourceService } from "../interfaces/resource-service.interface";
 
-export default class UserService {
+export default class UserService
+  implements
+    ResourceService<User, Prisma.UserCreateInput, Prisma.UserUpdateInput>
+{
   constructor(private readonly userRepository: UserRepository) {}
 
-  async findAll(): Promise<User[]> {
-    return this.userRepository.findAll();
+  async findOne(id: number): Promise<User | null> {
+    return await this.userRepository.findOne(id);
   }
 
-  async findOne(id: number): Promise<User | null> {
-    return this.userRepository.findOne(id);
+  async findAll(): Promise<User[]> {
+    return await this.userRepository.findAll();
   }
 
   async create(createUserDto: Prisma.UserCreateInput): Promise<User> {
-    return this.userRepository.create(createUserDto);
+    return await this.userRepository.create(createUserDto);
   }
 
   async update(
     id: number,
     updateUserDto: Prisma.UserUpdateInput
   ): Promise<User> {
-    return this.userRepository.update(id, updateUserDto);
+    return await this.userRepository.update(id, updateUserDto);
   }
 
   async delete(id: number): Promise<User> {
-    return this.userRepository.delete(id);
+    return await this.userRepository.delete(id);
   }
 }

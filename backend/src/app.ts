@@ -4,6 +4,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import PrismaService from "./services/prisma.service";
 import userRoutes from "./routes/user.route";
+import productRoutes from "./routes/product.route";
 import errorHandler from "./middlewares/errorHandler";
 
 dotenv.config();
@@ -34,6 +35,7 @@ prismaService
     console.log(`An error occured while connecting database: ${error}`);
   });
 
+app.use("/products", productRoutes);
 app.use("/users", userRoutes);
 
 app.use(errorHandler);

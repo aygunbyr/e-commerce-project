@@ -1,7 +1,10 @@
 import { User, Prisma } from "@prisma/client";
 import PrismaService from "../services/prisma.service";
+import { Repository } from "../interfaces/repository.interface";
 
-export default class UserRepository {
+export default class UserRepository
+  implements Repository<User, Prisma.UserCreateInput, Prisma.UserUpdateInput>
+{
   constructor(private readonly prismaService: PrismaService) {}
 
   async findAll(): Promise<User[]> {
