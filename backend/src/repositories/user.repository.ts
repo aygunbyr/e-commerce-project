@@ -7,13 +7,16 @@ export default class UserRepository
 {
   constructor(private readonly prismaService: PrismaService) {}
 
-  async findAll(): Promise<User[]> {
-    return await this.prismaService.user.findMany();
+  async findAll(): Promise<Partial<User>[]> {
+    return await this.prismaService.user.findMany({
+      select: { email: true, fullName: true, address: true },
+    });
   }
 
-  async findOne(id: number): Promise<User | null> {
+  async findOne(id: number): Promise<Partial<User> | null> {
     return await this.prismaService.user.findUnique({
       where: { id },
+      select: { email: true, fullName: true, address: true },
     });
   }
 

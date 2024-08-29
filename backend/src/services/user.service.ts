@@ -8,12 +8,12 @@ export default class UserService
 {
   constructor(private readonly userRepository: UserRepository) {}
 
-  async findOne(id: number): Promise<User | null> {
-    return await this.userRepository.findOne(id);
+  async findAll(): Promise<Partial<User>[]> {
+    return await this.userRepository.findAll();
   }
 
-  async findAll(): Promise<User[]> {
-    return await this.userRepository.findAll();
+  async findOne(id: number): Promise<Partial<User> | null> {
+    return await this.userRepository.findOne(id);
   }
 
   async create(createUserDto: Prisma.UserCreateInput): Promise<User> {
